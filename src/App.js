@@ -10,7 +10,8 @@ function App() {
       <Header />
       <Divider />
       <Container maxWidth="sm" className="main">
-        <Headline header="Posts" desc="Click the button to render posts" />
+        <Headline header={"Posts"} desc="Click the button to render posts" />
+        <Divider />
       </Container>
     </div>
   );
