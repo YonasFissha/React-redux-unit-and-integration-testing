@@ -1,7 +1,6 @@
 import React from "react";
 import Enzyme, { shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import checkPropTypes from "check-prop-types";
 
 import Headline from "./index";
 import { findByTestAttr, checkProps } from "../../../utils";
