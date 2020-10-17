@@ -1,0 +1,28 @@
+header{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    height: 100px;
+    background-color: white;
+    .wrap {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 980px;
+        height: 100%;
+        position: relative;
+
+            .logo {
+                display: block;
+                width: 100px;
+                position: absolute;
+                left: 10px;
+            }
+                img{
+                    display: block;
+                    width: 100%;
+                    margin: 0;
+                }
+    }
+}
