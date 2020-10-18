@@ -6,25 +6,28 @@ import Post from "./components/Post";
 import Container from "@material-ui/core/Container";
 import Divider from "@material-ui/core/Divider";
 import "./app.css";
-import { useSelector } from "react-redux";
-function App() {
-  const todo = useSelector((state) => state.postsReducer);
+import { connect } from "react-redux";
+function App({ posts }) {
   return (
-    <div className="App">
+    <div className="App" data-test="appComponent">
       <Header />
       <Divider />
       <Container maxWidth="sm" className="main">
         <Headline header={"Posts"} desc="Click the button to render posts" />
         <GetPostButton buttonText="Get Posts" />
         <Divider />
-        {todo
-          ? todo.map((to) => {
-              return <Post title={to.title} desc={to.body} />;
+        {posts
+          ? posts.map((post) => {
+              return <Post title={post.title} desc={post.body} />;
             })
           : null}
       </Container>
     </div>
   );
 }
-
-export default App;
+function mapStatetoProps(state) {
+  return {
+    posts: state.postsReducer,
+  };
+}
+export default connect(mapStatetoProps)(App);
